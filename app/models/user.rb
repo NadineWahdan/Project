@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 	validates_presence_of :fname
 	validates_presence_of :lname
 	validate :that_born_on_is_not_in_the_future
+    attr_accessible :fname, :lname, :profilePicture
 def that_born_on_is_not_in_the_future self.errors.add :dob, 'is in the future' \
 unless self.born_on <= Date.today end
 
