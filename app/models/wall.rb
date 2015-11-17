@@ -1,5 +1,5 @@
 class Wall < ActiveRecord::Base
-	has_many :followersa
+	has_many :followers
 
 	def self.up
       create_table :Wall do |t|
